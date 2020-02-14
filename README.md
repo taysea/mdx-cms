@@ -35,7 +35,12 @@ To run in production mode:
 yarn build && yarn next start
 ```
 
-To deploy with Netlify, connect this repository to your Netlify account. Then, go to Site settings > Build & deply.
+### Deploy your app to Netlify
+
+To deploy with Netlify, connect this repository to your Netlify account. Then, go to Site settings > Build & deploy.
+
 Update the settings to be:
+
 Build command: `yarn export`
+
 Publish directory: `/out`
