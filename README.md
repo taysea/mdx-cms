@@ -15,18 +15,9 @@ cd grommet-nextjs-starter
 
 Install dependencies and start the developmenet server.
 
-If you use yarn:
-
 ```
 yarn install
 yarn start
-```
-
-If you use npm:
-
-```
-npm install
-npm start
 ```
 
 To run in production mode:
