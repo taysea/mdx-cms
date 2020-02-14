@@ -1,5 +1,6 @@
 # Grommet Next.js Starter
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/eea4b49d-226a-4026-8d10-49d0830e0939/deploy-status)](https://app.netlify.com/sites/grommet-nextjs-starter/deploys)
 This is a starter project for React that uses Grommet and Next.js.
 
 ### Getting Started
