@@ -5,6 +5,8 @@
   "main": "src/pages/index.js",
   "private": true,
   "dependencies": {
+    "@mdx-js/loader": "^1.6.5",
+    "@next/mdx": "^9.4.4",
     "grommet": "^2.10.0",
     "grommet-icons": "^4.4.0",
     "next": "^9.1.2",
