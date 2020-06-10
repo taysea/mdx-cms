@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: test-repo
   branch: master # Branch to update (optional; defaults to master)
 media_folder: public/img
 public_folder: img
@@ -8,6 +8,8 @@ collections:
     label: Pages
     folder: src/pages
     slug: '{{slug}}'
+    extension: 'mdx'
+    format: 'frontmatter'
     create: true
     fields:
       - name: title
