@@ -9,6 +9,8 @@ collections:
     label: Pages
     folder: src/pages
     slug: '{{slug}}'
+    extension: mdx
+    format: frontmatter
     create: true
     fields:
       - name: title
@@ -16,4 +18,4 @@ collections:
         widget: string
       - name: body
         label: Body
-        widget: markdown
+        widget: mdx
