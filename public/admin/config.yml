@@ -15,4 +15,4 @@ collections:
         widget: string
       - name: body
         label: Body
-        widget: markdown
+        widget: mdx
