@@ -1,1 +1,4 @@
-# Test third page
+---
+title: Third page
+---
+Hey there this is something.
