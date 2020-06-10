@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Grommet, grommet } from 'grommet';
 import { components } from '../components';
-import { Layout } from '../layout';
+import { Layout } from '../layouts';
 
 const capitalizeFLetter = word => {
   return word.replace(/^./, word[0].toUpperCase());
