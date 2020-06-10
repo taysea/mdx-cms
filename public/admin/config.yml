@@ -1,15 +1,14 @@
 backend:
-  name: test-repo
+  name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 media_folder: public/img
+publish_mode: editorial_workflow
 public_folder: img
 collections:
   - name: pages
     label: Pages
     folder: src/pages
     slug: '{{slug}}'
-    extension: 'mdx'
-    format: 'frontmatter'
     create: true
     fields:
       - name: title
@@ -17,4 +16,4 @@ collections:
         widget: string
       - name: body
         label: Body
-        widget: mdx
+        widget: markdown
