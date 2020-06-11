@@ -18,27 +18,23 @@ jobs:
       - run: npm install
       - name: Create build directory
         run: npm run build --if-present
-      - name: Move to build directory
-        run: echo `cd .next`
-      - name: Stage file
-        run: echo `git add build-manifest.json -f`
-      - name: Move file to root
-        env:
-          ROOT_DIR: __dirname
-        run: echo `git mv build-manifest.json ${ROOT_DIR}`
-      - name: Move to desired branch
-        uses: actions/checkout@v2
-        ref: 'test3'
-      - name: Add to other branch
-        uses: EndBug/add-and-commit@v4 # You can change this to use a specific version
+      - name: Make a file
+        run: echo "123" > .file.txt
+      # - name: Move to build directory
+      #   run: echo `cd .next`
+      # - name: Stage file
+      #   run: echo `git add build-manifest.json -f`
+      # - name: Move file to root
+      #   env:
+      #     ROOT_DIR: __dirname
+      #   run: echo `git mv build-manifest.json ${ROOT_DIR}`
+      # - name: Move to desired branch
+      #   uses: actions/checkout@v2
+      #   ref: 'test3'
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v4
         with:
           force: true
-          # The message for the commit
-          # Default: 'Commit from GitHub Actions'
-          message: 'Update manifest file'
-          # Name of the branch to use, if different from the one that triggered the workflow
-          # Default: the branch that triggered the workflow (from GITHUB_REF)
-          ref: 'test3'
+          message: 'Your commit message'
         env:
-          # This is necessary in order to push a commit to the repo
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
