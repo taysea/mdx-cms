@@ -1,8 +1,5 @@
 name: Update theme .min.js and .json
-on:
-  push:
-    branches:
-      - master
+on: pull_request
 
 jobs:
   build:
