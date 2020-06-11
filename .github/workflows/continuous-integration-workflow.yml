@@ -23,6 +23,6 @@ jobs:
       - name: Stage file
         run: echo `git add build-manifest.json -f`
       - name: Move file to root
-          env:
-            ROOT_DIR: __dirname
+        env:
+          ROOT_DIR: __dirname
         run: echo `git mv build-manifest.json ${ROOT_DIR}`
