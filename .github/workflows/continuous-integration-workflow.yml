@@ -1,16 +1,16 @@
-name: Update theme .min.js and .json
+name: Test Example
 on: pull_request
 
 jobs:
-  build:
-    # Updates the NEXT .min.js in gh-pages branch
-    name: Update .min.js
-    # This job runs on Linux
+  first_job:
+    name: My first job
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js
-        uses: actions/setup-node@v1
-      - run: yarn build
-      env:
-        CI: true
+      - name: Print a greeting
+        env:
+          MY_VAR: Hi there! My name is
+          FIRST_NAME: Mona
+          MIDDLE_NAME: The
+          LAST_NAME: Octocat
+        run: |
+          echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
