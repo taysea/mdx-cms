@@ -1,0 +1,19 @@
+name: Update theme .min.js and .json
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    # Updates the NEXT .min.js in gh-pages branch
+    name: Update .min.js
+    # This job runs on Linux
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+      - run: yarn build
+      env:
+        CI: true
