@@ -18,19 +18,19 @@ jobs:
       - run: npm install
       - name: Create build directory
         run: npm run build --if-present
-      - name: Make a file
-        run: echo "123" > ./file.txt
-      # - name: Move to build directory
-      #   run: echo `cd .next`
-      # - name: Stage file
-      #   run: echo `git add build-manifest.json -f`
-      # - name: Move file to root
-      #   env:
-      #     ROOT_DIR: __dirname
-      #   run: echo `git mv build-manifest.json ${ROOT_DIR}`
-      # - name: Move to desired branch
-      #   uses: actions/checkout@v2
-      #   ref: 'test3'
+      # - name: Make a file
+      #   run: echo "123" > ./file.txt
+      - name: Move to build directory
+        run: echo `cd .next`
+      - name: Stage file
+        run: echo `git add build-manifest.json -f`
+      - name: Move file to root
+        env:
+          ROOT_DIR: __dirname
+        run: echo `the root dir is ${ROOT_DIR} && git mv build-manifest.json ${ROOT_DIR}`
+      - name: Move to desired branch
+        uses: actions/checkout@v2
+        ref: 'test3'
       - name: Commit changes
         uses: EndBug/add-and-commit@v4
         with:
