@@ -19,7 +19,7 @@ jobs:
       - name: Create build directory
         run: npm run build --if-present
       - name: Make a file
-        run: echo "123" > .file.txt
+        run: echo "123" > ./file.txt
       # - name: Move to build directory
       #   run: echo `cd .next`
       # - name: Stage file
